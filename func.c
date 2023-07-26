@@ -1,17 +1,65 @@
 #include "shell.h"
-/**
- * _strlen - return len of a string.
- * @str: string.
- * Return: len.
- */
-int _strlen(char *str)
-{
-	int len = 0;
 
-	while (*str)
+/**
+ * _getenv - get an environment variable.
+ * @name: envirnment variable
+ * Return: a pointer to teh value in the environment.
+ */
+char *_getenv(const char *name)
+{
+	size_t len = _strlen(name);
+
+	while (*environ)
 	{
-		len++;
-		str++;
+		if (strncmp(name, *environ, len) == 0 && (*environ)[len] == '=')
+		{
+			return ((*environ) + len + 1);
+		}
+		environ++;
 	}
-	return (len);
+	return (NULL);
 }
+/**
+ * env - prints the environment.
+ *
+ * Return: nothing.
+ */
+void env(void)
+{
+	char **env = environ;
+	size_t len = 0;
+
+	while (*env != NULL)
+	{
+		len = 0;
+		while ((*env)[len])
+		{
+			len++;
+		}
+		write(STDOUT_FILENO, *env, len);
+		write(STDOUT_FILENO, "\n", 1);
+		env++;
+	}
+}
+
+/**
+ * _strncpy - copies a string.
+ * @dest: destination string.
+ * @src: source string.
+ * @n: number of bytes.
+ * Return: dest.
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i = 0;
+
+	while (i < n && src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	for (; i < n; i++)
+		dest[i] = '\0';
+	return (dest);
+}
+
