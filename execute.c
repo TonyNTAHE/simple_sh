@@ -3,7 +3,7 @@
 /**
  * execute_cmd - execute command line.
  * @argv: argument passed to the program.
- * Return: nothing.
+ * Return: well this not return anything at all.
  */
 void execute_cmd(char **argv)
 {
