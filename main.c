@@ -20,7 +20,7 @@ int main(void)
 		read_input(&buf, &n);
 		if (_strcmp(buf, "exit") == 0)
 		{
-			break;
+			exit(0);
 		}
 		parse_input(buf, argv);
 		child_pid = fork();

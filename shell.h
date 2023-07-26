@@ -21,4 +21,5 @@ char *_strchr(char *s, char c);
 char *_getenv(const char *name);
 int _strlen(const char *s);
 extern char **environ;
+void _exit(int status);
 #endif
