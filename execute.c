@@ -9,6 +9,8 @@ void execute_cmd(char **argv)
 {
 	char *path = _getenv("PATH");
 	char *dir = path;
+	char cmd_path[256];
+	int i = 0;
 
 	if (argv[0][0] == '/')
 	{
@@ -18,9 +20,6 @@ void execute_cmd(char **argv)
 	}
 	while (*dir != '\0')
 	{
-		char cmd_path[256];
-		int i = 0;
-
 		while (*dir != '\0' && *dir != ':')
 		{
 			cmd_path[i++] = *dir;

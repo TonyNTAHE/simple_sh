@@ -17,6 +17,6 @@ void read_input(char **buf, size_t *n)
 	}
 	else
 	{
-		(*buf)[chsize - 1] = '\0';
+		(*buf)[chsize  - 1] = '\0';
 	}
 }

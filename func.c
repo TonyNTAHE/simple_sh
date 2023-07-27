@@ -27,16 +27,10 @@ char *_getenv(const char *name)
 void env(void)
 {
 	char **env = environ;
-	size_t len = 0;
 
 	while (*env != NULL)
 	{
-		len = 0;
-		while ((*env)[len])
-		{
-			len++;
-		}
-		write(STDOUT_FILENO, *env, len);
+		write(STDOUT_FILENO, *env, _strlen(*env));
 		write(STDOUT_FILENO, "\n", 1);
 		env++;
 	}

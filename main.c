@@ -6,6 +6,7 @@
  */
 int main(void)
 {
+	int status;
 	size_t n = 0;
 	char *buf = NULL;
 	char *argv[MAX_ARGUMENTS];
@@ -35,7 +36,7 @@ int main(void)
 		}
 		else
 		{
-			wait(NULL);
+			wait(&status);
 		}
 	}
 	free(buf);
