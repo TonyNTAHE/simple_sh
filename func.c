@@ -3,7 +3,7 @@
 /**
  * _getenv - get an environment variable.
  * @name: envirnment variable
- * Return: a pointer to teh value in the environment.
+ * Return: This will return a value.
  */
 char *_getenv(const char *name)
 {
