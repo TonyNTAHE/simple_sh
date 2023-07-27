@@ -5,7 +5,7 @@
  * including NULL  '\0' byte.
  * @dest: destination string.
  * @src: source string.
- * Return: pointer to dest.
+ * Return: this will return a value.
  */
 char *_strcpy(char *dest, char *src)
 {
