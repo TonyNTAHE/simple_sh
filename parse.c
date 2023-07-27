@@ -4,7 +4,7 @@
  * parse_input - parsing inputs
  * @input: inputs.
  * @argv:array of character.
- * Return: nothing.
+ * Return: zero on success.
  */
 void parse_input(char *input, char **argv)
 {

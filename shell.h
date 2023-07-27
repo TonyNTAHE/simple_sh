@@ -7,9 +7,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdarg.h>
-
-#define MAX_ARGUMENTS 10
-
+#define MAX_ARGUMENTS 20
 void print_prompt(void);
 void read_input(char **buf, size_t *n);
 void parse_input(char *input, char **argv);
@@ -23,5 +21,4 @@ char *_strchr(char *s, char c);
 char *_getenv(const char *name);
 int _strlen(const char *s);
 extern char **environ;
-
 #endif

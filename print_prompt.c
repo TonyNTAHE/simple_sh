@@ -2,7 +2,7 @@
 
 /**
  * print_prompt - prints prompts
- *
+ * Return: none on success
  */
 void print_prompt(void)
 {

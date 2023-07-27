@@ -4,7 +4,7 @@
  * read_input - reads inputs from stdin.
  * @buf: buffer
  * @n: pointer the the length of chararcter readed.
- * Return: nothing.
+ * Return: nothing is going to be returned here.
  */
 void read_input(char **buf, size_t *n)
 {
